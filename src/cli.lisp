@@ -16,7 +16,7 @@
     (lambda (&rest arguments2) (apply fn (append arguments2 arguments))))
 
 (defun string-to-sym (str) 
-    (intern str))
+    (intern (string-upcase str)))
 
 (defun concat-prefix (prefix base) 
     (concatenate 'string prefix "-" base))
